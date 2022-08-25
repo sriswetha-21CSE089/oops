@@ -1,0 +1,150 @@
+package com.mycompany.car;
+
+import java.util.Scanner;
+
+/**
+ *
+ * @author Vishnu
+ */
+public class Car 
+{
+
+    public static void main(String[] args) 
+    {
+        owner obj=new owner("priya","madurai","enginneer");
+    System.out.println(obj);
+    System.out.println(obj.getcity());
+    System.out.println(obj.getClass());
+    System.out.println(obj.getprofession());
+    
+    car1 c=new car1(13,"red",6,"maruti",8,obj); 
+    System.out.println(c.getregisterno());
+    System.out.println(c.getcolour());
+    System.out.println(c.getbrand());
+    System.out.println(c.getmodel());
+    System.out.println(c);
+    System.out.println();
+    owner obj1=new owner("magi","madurai","enginneer");
+    System.out.println(obj1);
+    System.out.println(obj1.getcity());
+    System.out.println(obj1.getClass());
+    System.out.println(obj1.getprofession());
+    
+    car1 c1=new car1(14,"blue",7,"audi",8,obj); 
+    System.out.println(c1.getregisterno());
+    System.out.println(c1.getcolour());
+    System.out.println(c1.getbrand());
+    System.out.println(c1.getmodel());
+    System.out.println(c1);
+    System.out.println();
+    owner obj2=new owner("maha","madurai","enginneer");
+    System.out.println(obj2);
+    System.out.println(obj2.getcity());
+    System.out.println(obj2.getClass());
+    System.out.println(obj2.getprofession());
+    
+    car1 c2=new car1(14,"pink",4,"yamaha",8,obj); 
+    System.out.println(c2.getregisterno());
+    System.out.println(c2.getcolour());
+    System.out.println(c2.getbrand());
+    System.out.println(c2.getmodel());
+    System.out.println(c2);
+    System.out.println();
+    owner obj3=new owner("sai","madurai","enginneer");
+    System.out.println(obj3);
+    System.out.println(obj3.getcity());
+    System.out.println(obj3.getClass());
+    System.out.println(obj3.getprofession());
+    
+    car1 c3=new car1(15,"green",6,"nano",8,obj); 
+    System.out.println(c3.getregisterno());
+    System.out.println(c3.getcolour());
+    System.out.println(c3.getbrand());
+    System.out.println(c3.getmodel());
+    System.out.println(c3);
+    System.out.println();
+    owner obj4=new owner("isai","madurai","enginneer");
+    System.out.println(obj4);
+    System.out.println(obj4.getcity());
+    System.out.println(obj4.getClass());
+    System.out.println(obj4.getprofession());
+    
+    car1 c4=new car1(16,"black",6,"susuki",8,obj); 
+    System.out.println(c4.getregisterno());
+    System.out.println(c4.getcolour());
+    System.out.println(c4.getbrand());
+    System.out.println(c4.getmodel());
+    System.out.println(c4); 
+    }
+}
+class owner
+{
+    String name;
+    String city;
+    String profession;
+    owner(String na,String ci,String pro )
+    {
+       name=na;
+       city=ci;
+       profession=pro; 
+    }
+    String getname()
+    {
+        return name;
+    }
+    String getcity()
+    {
+        return city;
+    }
+    
+     String getprofession()
+    {
+        return profession;
+    }
+    @Override
+    public String toString()
+    {
+        return "name :"+name+" city: "+city+" profession "+profession;
+    }
+
+}
+class car1
+{ 
+    owner obj2;
+    int regno;
+    String colour;
+    int seats;
+    String brand;
+    int model;
+    
+    car1(int reg,String col,int se,String br,int mo,owner ob)
+    {
+        regno=reg;
+        colour=col;
+        seats=se;
+        brand=br;
+        model=mo;
+        obj2=ob;
+    }
+    int getregisterno()
+    {
+        return regno;
+    }
+    String getcolour()
+    {
+        return colour;
+    }
+    String getbrand()
+    {
+        return brand;
+    }
+    int getmodel()
+    {
+        return model;
+    }
+    @Override
+    public String toString()
+    {
+        return "car{register number "+regno+" colour "+colour+" seats "+seats+" brand "+brand+" model "+model+" ] "+" owner :[name = "+obj2.name+" city= "+obj2.city+" profession= "+obj2.profession+"]";
+    }
+}
